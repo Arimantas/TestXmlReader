@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Animals>
+  <Dog>
+    <AnimalClass>mammal</AnimalClass>
+    <Name>Suo</Name>
+    <Weight>15.0</Weight>
+    <Height>0.50</Height>
+    <Move>runs</Move>
+  </Dog>
+  <Cat>
+    <AnimalClass>mammal</AnimalClass>
+    <Name>Kate</Name>
+    <Weight>8.0</Weight>
+    <Height>0.35</Height>
+    <Move>walk</Move>
+  </Cat>
+  <Pigeon>
+    <AnimalClass>bird</AnimalClass>
+    <Name>Paukstis</Name>
+    <Weight>0.50</Weight>
+    <Height>0.15</Height>
+    <Move>flies</Move>
+  </Pigeon>
+</Animals>
