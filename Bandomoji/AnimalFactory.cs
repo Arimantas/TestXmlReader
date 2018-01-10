@@ -8,7 +8,7 @@ namespace Bandomoji
         
 
         // nors list ir dinaminis, cia viskas statiska.. kolkas
-        public List<Animal> MakeAnimal(string newAnimalType)
+        public List<Animal> MakeAnimalS()
         {
 			List<Animal> result = new List<Animal>();
 			XmlDocument doc = new XmlDocument();
@@ -16,31 +16,32 @@ namespace Bandomoji
 
             XmlNodeList animalsNodes = doc.SelectSingleNode("Animals").ChildNodes;
 			foreach(XmlNode animalNode in animalsNodes){
+				Animal anim = null;
 				switch (animalNode.Name)
 				{
 					case "Dog":
-						result = new Dog();
+						anim = new Dog();
 						
 					break;
-					
+					case "Cat":
+						anim = new Cat();
+					break;
+					case "Pigeon":
+						anim = new Pigeon();
+					break;
 				}
-				if(result != null){
+				if(anim != null){
+					anim.AnimalClass = animalNode.SelectSingleNode("AnimalClass").InnerText;
+					anim.Name = animalNode.SelectSingleNode("Name").InnerText;
+					anim.Weight = Convert.ToDouble(animalNode.SelectSingleNode("Weight").InnerText);
+					anim.Height = Convert.ToDouble(animalNode.SelectSingleNode("Height").InnerText);
+					anim.Move = animalNode.SelectSingleNode("Move").InnerText;
+					
+					result.Add(anim);
 					
 				}
 			}
-        }
-
-        private void ReadXmlFile(string elementType)
-        {
-            
-            foreach (XmlNode animalNode in animals)
-            {
-                _localClass = animalNode.SelectSingleNode("AnimalClass").InnerText;
-                _localName = animalNode.SelectSingleNode("Name").InnerText;
-                _localWeight = Convert.ToDouble(animalNode.SelectSingleNode("Weight").InnerText);
-                _localHeight = Convert.ToDouble(animalNode.SelectSingleNode("Height").InnerText);
-                _localMove = animalNode.SelectSingleNode("Move").InnerText;
-            }
+			return result;
         }
     }
 }
