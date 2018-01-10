@@ -12,19 +12,6 @@ namespace Bandomoji
             ReturnAnimal();
         }
 
-        public Dog(string animalClass, string name, double weight, double height, string move)
-        {
-
-            Console.WriteLine("Hello, im Dog in constructor!");
-            Console.WriteLine();
-
-            GetAnimalClass = animalClass;
-            GetName = name;
-            GetWeight = weight;
-            GetHeight = height;
-            GetMove = move;
-
-            ReturnAnimal();
-        }
+       
     }
 }
