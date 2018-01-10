@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Bandomoji
 {
@@ -12,6 +8,21 @@ namespace Bandomoji
         {
             Console.WriteLine("Hello, im Cat!");
             Console.WriteLine();
+            ReturnAnimal();
+        }
+
+        public Cat(string animalClass, string name, double weight, double height, string move)
+        {
+
+            Console.WriteLine("Hello, im Cat in constructor!");
+            Console.WriteLine();
+
+            GetAnimalClass = animalClass;
+            GetName = name;
+            GetWeight = weight;
+            GetHeight = height;
+            GetMove = move;
+
             ReturnAnimal();
         }
     }
