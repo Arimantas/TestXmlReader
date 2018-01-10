@@ -6,12 +6,8 @@ namespace Bandomoji
     {
         public Dog()
         {
-            Console.WriteLine("Hello, im Dog!");
             Console.WriteLine();
-            // pries kvieciant turi buti priskirtos reiksmes
-            ReturnAnimal();
-        }
-
-       
+            Console.WriteLine("Hello, im Dog!");
+        }       
     }
 }

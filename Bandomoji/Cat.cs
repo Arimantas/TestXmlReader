@@ -6,24 +6,8 @@ namespace Bandomoji
     {
         public Cat()
         {
+            Console.WriteLine();
             Console.WriteLine("Hello, im Cat!");
-            Console.WriteLine();
-            ReturnAnimal();
-        }
-
-        public Cat(string animalClass, string name, double weight, double height, string move)
-        {
-
-            Console.WriteLine("Hello, im Cat in constructor!");
-            Console.WriteLine();
-
-            GetAnimalClass = animalClass;
-            GetName = name;
-            GetWeight = weight;
-            GetHeight = height;
-            GetMove = move;
-
-            ReturnAnimal();
         }
     }
 }
